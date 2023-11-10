@@ -4,12 +4,13 @@ submitB1.onclick = function(){
     const kidTickets=document.getElementById("kidTickets").value *1;
     const sold1=document.getElementById("sold1").value *1;
     const sold2=document.getElementById("sold2").value *1;
-    // trích 10% cho từ thiện
-    const charity=0.1;
+    
+    const charity=document.getElementById("charity").value*1;
+    const percent = charity/100;
     // doanh thu
     const revenue = (adultTickets*sold1) + (kidTickets*sold2);
     // tiền từ thiện
-    const charityMoney = revenue * charity;
+    const charityMoney = revenue * percent;
     // Tiền còn lại sau khi trừ:
     const surplusMoney = revenue-charityMoney;
     
